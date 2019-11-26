@@ -148,7 +148,7 @@ class App extends Component {
                 <CusNavBar/>
                 <Container>
                     <Row style={{}}>
-                        <Col sm={3} style={{backgroundColor: '#f7f7f7', paddingTop: '20px'}}>
+                        <Col sm={3} className='col-left'>
                             <h3>Districts</h3>
                             <ListFilter filter={this.filter}/>
                             <hr/>
@@ -165,19 +165,14 @@ class App extends Component {
                                         />
                                     </div>
                                     :
-                                    <ul style={{height: '450px', overflow: 'scroll', paddingLeft: '0px'}}>
+                                    <ul className='districts-ul'>
                                         {districts.length > 0 ? districts : 'No data!'}
                                     </ul>
 
                             }
 
                         </Col>
-                        <Col style={{
-                            backgroundColor: '#f7f7f7',
-                            padding: '20px',
-                            height: '600px',
-                            overflow: 'scroll',
-                        }}>
+                        <Col className='col-right'>
                             <div style={{borderLeft: '1px solid #C0C0C0', height: '100%', paddingLeft: '10px'}}>
                                 <h3>Sub-Counties</h3>
                                 {
@@ -192,7 +187,7 @@ class App extends Component {
                                             />
                                         </div>
                                         :
-                                        <ul style={{paddingLeft: '0px'}}>
+                                        <ul className='sub-counties-ul'>
                                             {subCounties.length > 0 ? subCounties : 'No data!'}
                                         </ul>
 
